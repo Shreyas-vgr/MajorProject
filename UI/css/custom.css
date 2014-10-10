@@ -1,0 +1,156 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: red;
+}
+
+body {
+  background: url("../Images/noise_light-grey.jpg");
+  font-family: 'Helvetica Neue', arial, sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 90%;
+  width: 90%;
+}
+
+@media (min-width: 60rem) {
+  .column {
+    margin: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: transparent;
+    border-color: black;
+    float: left;
+  }
+
+  .column.full { width: 100%; }
+  .column.two-thirds { width: 66.7%; }
+  .column.half { width: 50%; }
+  .column.third { width: 33.3%; }
+  .column.fourth { width: 20%; float: right}
+  .column.flow-opposite { float: right; }
+}
+
+@media (max-width: 60rem) {
+  .column {
+    padding-right: 1rem;
+    background-color: transparent;
+    border-color: black;
+  }
+
+  .column.full { width: 100%; }
+  .column.two-thirds { width: 100%%; }
+  .column.half { width: 50%; }
+  .column.third { width: 33.3%; }
+  .column.fourth { width: 25%; display: none; }
+  .column.flow-opposite { float: right; }
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.suggestions{
+  width: 100%;
+  margin-bottom: 2%;
+  background-color: white;
+}
+
+.suggestions-head{
+  padding: 1%;
+  color: white;
+  background-color: #505050;
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px grey solid;
+}
+
+.suggestions-items{
+  list-style-type: none;
+  width: 100%;
+  overflow: hidden;
+}
+
+.suggestions-images{
+  padding: 1%;
+  width: auto;
+  display: inline-block;
+  text-align: left;
+  background: #fff;
+  margin: 1rem;
+}
+
+.suggestions-images img{
+  position: relative;
+  height: 30%;
+}
+
+.suggestions-images h1{
+  color: black;
+  font-size: 1rem;
+  text-align: center;
+}
+
+li{
+  list-style-type: none;
+}
+
+.suggestions-showmore{
+  width: 100%;
+  text-align: right;
+}
+
+.suggestions-showmore button{
+  right: 0px;
+  color: #136CBB;
+  background-color: white;
+  border: none;
+}
+
+.fourth{
+  background-color: white;
+}
+
+
+.rate-items{
+list-style-type: none;
+width: 100%;
+overflow: hidden;
+color: black;
+position : relative;
+}
+
+.rate-image{
+  padding : 1%;
+width: auto;
+display: inline-block;
+background: #fff;
+margin: 1%;
+}
+
+.rate-image img{
+  position : relative;
+  width: 100%;
+  color: black;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.rate-image h1{
+  color: black;
+  font-size: 1rem;
+  text-align: center;
+}
