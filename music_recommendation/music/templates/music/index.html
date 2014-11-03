@@ -1,11 +1,145 @@
-{% if results %}
-<ul> {% for i in results %}
-	<li> {{ i.song_name }}</li>
-	<li> {{ i.rating }}</li>
-	<li> {{ i.id }}</li>
-	{% endfor %}
-</ul>
-{% else %}
-<p> Not availabe</p>
+<! Doctype HTML>
+<head>
+  <title>Major Project </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="static/css/Normalize.css">
+  <link rel="stylesheet" type="text/css" href="static/css/jRating.jquery.css">
+  <link rel="stylesheet" type="text/css" href="static/css/custom.css">
 
-{% endif %}
+  <script src="static/js/jquery.js"></script>
+  <script src="static/js/jRating.jquery.js"></script>
+  <script src="static/js/custom.js"></script>
+
+</head>
+
+<body>
+  <div class='top-bar'>
+    <H2>Major Project</H2>
+  </div>
+  <div class="container">
+    <div class="row clearfix">
+      <div class="column two-thirds">
+        <div class="suggestions">
+          <div class="suggestions-head">
+            Artist
+          </div>
+		{% if results %}
+	<ul> 
+		{% for i in results %}
+			<li> {{ i.song_name }}</li>
+			<li> {{ i.rating }}</li>
+			<li> {{ i.id }}</li>
+		{% endfor %}
+	</ul>
+		{% else %}
+			<p> Not availabe</p>
+
+		{% endif %}
+	
+
+          <ul class="suggested-items">
+            <li class='suggestions-images'>
+              <img src="static/images/3.jpg"/>
+              <h1>Image Title</h1>
+              <div class='rating'></div>
+            </li>
+            <li class='suggestions-images'>
+              <img src="static/images/4.jpg"/>
+              <h1>Image Title</h1>
+              <div class='rating'></div>
+            </li>
+            <li class='suggestions-images'>
+              <img src="static/images/2.jpg"/>
+              <h1>Image Title</h1>
+              <div class='rating'></div>
+            </li>
+          </ul>
+          <div class="suggestions-showmore">
+            <button>showmore >></button>
+          </div>
+        </div>
+
+        <div class="suggestions">
+          <div class="suggestions-head">
+            Albums
+          </div>
+          <ul class="suggested-items">
+            <li class='suggestions-images'>
+              <img src="static/images/1.jpg"/>
+              <h1>Image Title</h1>
+              <div class='rating'></div>
+            </li>
+            <li class='suggestions-images'>
+              <img src="static/images/5.jpg"/>
+              <h1>Image Title</h1>
+              <div class='rating'></div>
+            </li>
+            <li class='suggestions-images'>
+              <img src="static/images/3.jpg"/>
+              <h1>Image Title</h1>
+              <div class='rating'></div>
+            </li>
+          </ul>
+          <div class="suggestions-showmore">
+            <button>showmore >></button>
+          </div>
+        </div>
+
+        <div class="suggestions">
+          <div class="suggestions-head">
+            Songs
+          </div>
+          <ul class="suggested-items">
+            <li class='suggestions-images'>
+              <img src="static/images/2.jpg"/>
+              <h1>Image Title</h1>
+              <div class='rating'></div>
+            </li>
+            <li class='suggestions-images'>
+              <img src="static/images/3.jpg"/>
+              <h1>Image Title</h1>
+              <div class='rating'></div>
+            </li>
+            <li class='suggestions-images'>
+              <img src="static/images/5.jpg"/>
+              <h1>Image Title</h1>
+              <div class='rating'></div>
+            </li>
+          </ul>
+          <div class="suggestions-showmore">
+            <button>showmore >></button>
+          </div>
+        </div>
+
+      </div>
+      <div class="column fourth">
+        <ul class="rate-items">
+          <li class='rate-image'>
+            <img src="static/images/1.jpg"/>
+            <h1>Image Title</h1>
+            <div class='rating'></div>
+
+          </li>
+          <li class='rate-image'>
+            <img src="static/images/3.jpg"/>
+            <h1>Image Title</h1>
+            <div class='rating'></div>
+          </li>
+          <li class='rate-image'>
+            <img src="static/images/4.jpg"/>
+            <h1>Image Title</h1>
+            <div class='rating'></div>
+          </li>
+          <li class='rate-image'>
+            <img src="static/images/5.jpg"/>
+            <h1>Image Title</h1>
+            <div class='rating'></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</HTML>
