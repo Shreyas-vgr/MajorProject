@@ -11,3 +11,4 @@ class Songs(models.Model):
 	duration = models.FloatField(default=0)
 	rating  = models.IntegerField(default=2)
 	genre = models.CharField(max_length=50)
+	has_rated = models.IntegerField(default=0)
